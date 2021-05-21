@@ -94,8 +94,8 @@ search:
     active: 1
     gold: 0
   preprocessingfilters:
-   - name: replace
-     args: ["else:","else_"]
+    - name: replace
+      args: ["else:","else_"]
 
   rows:
     selector: else_is_displayed_2 tr:has(> td > a[href^=download])
@@ -119,17 +119,16 @@ search:
       selector: a[href^="index.php?page=torrent-details"]
       attribute: onmouseover
       filters:
-       - name: replace
-         args: "return overlib\\('<img src=(.+?) "
+        - name: replace
+          args: "return overlib\\('<img src=(.+?) "
     date:
       selector: td:nth-child(6)
       filters:
-       - name: dateparse
-         args: "02/01/2006"
+        - name: dateparse
+          args: "02/01/2006"
     size:
       selector: td:nth-child(11)
     seeders:
       selector: td:nth-child(8) > a
     leechers:
       selector: td:nth-child(9) > a
-
